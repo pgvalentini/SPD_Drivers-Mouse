@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.grid-container {    
+    display: grid;
+    grid-gap: 0.3em;
+    grid-template-areas: 
+        'largoTotal'
+        'derecha'
+        'izquierda'
+        'profe';
+    justify-items: normal;
+} 
+
+@media (min-width: 700px) {
+    .grid-container  {
+        grid-template-areas: 
+        'largoTotal derecha derecha'
+        'largoTotal izquierda izquierda'
+        'profe profe profe'
+
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid-container  {
+        grid-template-areas: 
+        'largoTotal largoTotal largoTotal largoTotal largoTotal'
+        'izquierda izquierda derecha derecha derecha'
+        'profe profe profe profe profe'
+
+    }
+}
+
+p{
+    text-indent: 3em;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    font-size: 13pt;
+    background-color: #efefef;
+    padding: 0.625em;
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+    padding: 0.0125em;
+    font-size: 2em;
+    /* margin-top: 2.8125em; */
+    font-weight: bolder;
+    text-shadow: 5px 2px 4px whitesmoke;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+.link {
+    color: #408ED8;
+    text-decoration:none;
+    font-size:1.5625em;
+    white-space: 4em;
+}
+
+
+.linkChico {
+    color: #0E6AB7;
+    text-decoration:none;
+    font-size:1em;
+}
+
+.link:hover {
+    color:#FFCC29;
+    font-size:1.875em;
+}
+
+.linkChico:hover {
+    color: #408ED8;
+    font-size:1.05em;
+}
+
+.derecha {
+    grid-area: derecha;
+    text-align:justify;
+
+}
+
+.profe {
+    grid-area: profe;
+    background-image: linear-gradient(to right, rgb(105, 234, 203) 0%, rgba(234, 204, 248, 0.48) 48%, rgba(102, 84, 241, 1) 100%), url(/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    text-align:center;
+    font-weight: bolder;
+}
+
+.izquierda {
+    grid-area: izquierda;
+    text-align: justify;
+}
+
+section {
+    background-color: white;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+}
+
+article {
+    background-color: white;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+    border-width:5px;
+    border-style:dashed;
+    border-color:#0E6AB7;
+}
+
+nav {
+    grid-area: largoTotal;
+    background-color: white;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+    text-align:center;
+}
+
+.imagen {
+    background-color: whitesmoke;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.ir-arriba {
+	display:none;
+	padding:20px;
+	background-color: #0E6AB7;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
